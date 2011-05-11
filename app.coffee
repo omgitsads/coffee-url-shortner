@@ -35,7 +35,7 @@ app.get '/:code', (req, res) ->
 
 app.post '/', (req, res) ->
   shortner.create req.body.url, (code) ->
-    res.render short_code: code, 201
+    res.send short_url:"http://#{req.header "Host"}/#{code}", long_url: req.body.url, 201
 
 
 # Only listen on $ node app.js
