@@ -1,18 +1,7 @@
 redis = require 'redis'
 client = redis.createClient()
 
-### Shortner class
-# 
-#### Usage
-#
-# shortner = require 'shortner'
-#
-# shortner.create "http://google.com", (code) ->
-#   console.log "http://my-shortner.com/#{code}"
-#
-# shortner.lookup "xYz1", (url) ->
-#   console.log url
-#
+#### Shortner class
 class Shortner
   # Setup the class with an array of valid chars.
   # You can add more to this if you want extra chars
